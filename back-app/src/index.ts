@@ -1,7 +1,5 @@
 import express, { Express, Request, Response } from "express";
 import dotenv from "dotenv";
-import { parse } from "path";
-import { info } from "console";
 
 dotenv.config();
 
@@ -11,7 +9,7 @@ const port = process.env.PORT || 3000;
 app.use(express.json());
 
 app.get("/", (req: Request, res: Response) => {
-  res.send("Express + HOLA");
+  res.send("Country Info App API");
 });
 
 app.get("/countries", async(req: Request, res: Response) => {

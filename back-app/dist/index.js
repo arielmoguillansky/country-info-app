@@ -19,7 +19,7 @@ const app = (0, express_1.default)();
 const port = process.env.PORT || 3000;
 app.use(express_1.default.json());
 app.get("/", (req, res) => {
-    res.send("Express + HOLA");
+    res.send("Country Info App API");
 });
 app.get("/countries", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {

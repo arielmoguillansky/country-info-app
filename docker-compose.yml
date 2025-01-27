@@ -1,0 +1,18 @@
+version: '3'
+services:
+  frontapp:
+    image: country-app-front
+    build: ./front-app
+    ports:
+      - '3000:3000'
+    environment:
+      NEXT_PUBLIC_API_URL: http://backapp:4000
+    depends_on:
+      - backapp
+  backapp:
+    image: country-app-back
+    build: ./back-app
+    ports:
+      - '4000:4000'
+    environment:
+      PORT: 4000
